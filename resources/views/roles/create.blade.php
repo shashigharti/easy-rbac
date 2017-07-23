@@ -3,7 +3,7 @@
 <div class="container form-container easy-rbac">
     <div class="panel-box panel-default">
         <div class="form__wrapper">
-            <form action="{{$form_helper->getAction($model)}}" method= {{$form_helper->getMethod($model)}}>
+            <form action="{{$form_helper->getAction($model, $type)}}" method= {{$form_helper->getMethod($model)}}>
                 {{csrf_field()}}
                 <div class="form-group form-material row">
                     <label for="name" class='control-label'>Name</label>

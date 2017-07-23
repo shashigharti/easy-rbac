@@ -8,7 +8,7 @@ use Robustit\EasyRBAC\Repositories\PermissionRepository;
 
 /**
  * Class PermissionController
- * @package Robust\Admin\Controllers
+ * @package Robustit\EasyRBAC\Controllers
  */
 class PermissionController extends Controller
 {

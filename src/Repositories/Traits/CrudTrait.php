@@ -6,7 +6,7 @@ namespace Robustit\EasyRBAC\Repositories\Traits;
  * Class QueryTrait
  * @package Robustit\EasyRBAC\Repositories\Traits
  */
-trait QueryTrait
+trait CrudTrait
 {
 
     /**
@@ -35,7 +35,6 @@ trait QueryTrait
      */
     public function store($data)
     {
-        dd();
         return $this->model->create($data);
     }
 }

@@ -22,8 +22,8 @@ class FormHelper
      * @param $model
      * @return string
      */
-    public function getAction($model)
+    public function getAction($model, $type)
     {
-        return $model->exists ? route('admin.roles.update', [$model->id]) : route('admin.roles.store');
+        return $model->exists ? route("admin.{$type}.update", [$model->id]) : route("admin.{$type}.store");
     }
 }

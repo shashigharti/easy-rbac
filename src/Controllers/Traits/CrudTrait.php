@@ -27,7 +27,8 @@ trait CrudTrait
     public function create()
     {
         return view("easy-rbac::{$this->type}.create", [
-            'model' => $this->model->getModel()
+            'model' => $this->model->getModel(),
+            'type' => $this->type
         ]);
     }
 

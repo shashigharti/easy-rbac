@@ -3,7 +3,7 @@
 namespace Robustit\EasyRBAC\Repositories;
 
 use Robustit\EasyRBAC\Models\Role;
-use Robustit\EasyRBAC\Repositories\Traits\QueryTrait;
+use Robustit\EasyRBAC\Repositories\Traits\CrudTrait;
 
 /**
  * Class RoleRepository
@@ -11,7 +11,7 @@ use Robustit\EasyRBAC\Repositories\Traits\QueryTrait;
  */
 class RoleRepository
 {
-    use QueryTrait;
+    use CrudTrait;
 
     /**
      * @var Role
