@@ -16,7 +16,7 @@
                            href="{{route('admin.roles.edit',['id' => $record->id])}}">
                             <i aria-hidden="true" class="site-menu-icon md-edit"></i>
                             Edit</a>
-                        <form accept-charset="UTF-8"
+                       {{-- <form accept-charset="UTF-8"
                               action="{{route('admin.roles.destroy',['id' => $record->id])}}" method="post">
                             {{csrf_field()}}
                             <input name="_method" type="hidden" value="DELETE">
@@ -26,7 +26,7 @@
                                 <i aria-hidden="true" class="site-menu-icon md-delete"></i>
                                 Delete
                             </button>
-                        </form>
+                        </form>--}}
                     </td>
                 </tr>
             @endforeach

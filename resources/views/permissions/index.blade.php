@@ -13,11 +13,11 @@
                     <td>{{$record->name}}</td>
                     <td class="text-nowrap text-right">
                         <a class="btn btn-info btn-edit btn-xs waves-effect waves-light"
-                           href="{{route('admin.roles.edit',['id' => $record->id])}}">
+                           href="{{route('admin.permissions.edit',['id' => $record->id])}}">
                             <i aria-hidden="true" class="site-menu-icon md-edit"></i>
                             Edit</a>
                         <form accept-charset="UTF-8"
-                              action="{{route('admin.roles.destroy',['id' => $record->id])}}" method="post">
+                              action="{{route('admin.permissions.destroy',['id' => $record->id])}}" method="post">
                             {{csrf_field()}}
                             <input name="_method" type="hidden" value="DELETE">
                             <button class="btn btn-info btn-delete btn-xs waves-effect waves-light"

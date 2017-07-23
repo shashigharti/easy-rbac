@@ -3,6 +3,7 @@ namespace Robustit\EasyRBAC\Repositories;
 
 use Robustit\EasyRBAC\Models\Permission;
 use Robustit\EasyRBAC\Repositories\Traits\CrudTrait;
+use Robustit\EasyRBAC\Repositories\Traits\QueryTrait;
 
 /**
  * Class PermissionRepository
@@ -10,7 +11,7 @@ use Robustit\EasyRBAC\Repositories\Traits\CrudTrait;
  */
 class PermissionRepository
 {
-    use CrudTrait;
+    use CrudTrait, QueryTrait;
 
     /**
      * @var Permission

@@ -3,15 +3,22 @@
 <div class="container form-container easy-rbac">
     <div class="panel-box panel-default">
         <div class="form__wrapper">
-            <form action="{{$form_helper->getAction($model, $type)}}" method= {{$form_helper->getMethod($model)}}>
+            <form action="{{$form_helper->getAction($model, $type)}}" method="POST">
                 {{csrf_field()}}
+                @if($form_helper->getMethod($model) === 'PUT')
+                    <input type="hidden" name="_method" value="PUT">
+                @endif
                 <div class="form-group form-material row">
                     <label for="name" class='control-label'>Name</label>
-                    <input type="text" name="name" class='form-control' placeholder="Admin User" required>
+                    <input type="text" name="name" class='form-control'
+                           value="{{$model->name or ''}}"
+                           placeholder="Admin User"
+                           required>
                 </div>
                 <div class="form-group form-material row">
                     <label for="description" class='control-label'>Description</label>
-                    <textarea name="description" class='form-control' placeholder="Description" required></textarea>
+                    <textarea name="description" class='form-control'
+                              placeholder="Description" required>{{$model->description or ''}}</textarea>
                 </div>
                 <div class="form-group form-material row">
                     <div class="table-responsive">

@@ -3,21 +3,11 @@
 namespace Robustit\EasyRBAC\Repositories\Traits;
 
 /**
- * Class QueryTrait
+ * Class CrudTrait
  * @package Robustit\EasyRBAC\Repositories\Traits
  */
 trait CrudTrait
 {
-
-    /**
-     * @return mixed
-     */
-    public function all()
-    {
-        return $this->model->all();
-    }
-
-
     /**
      * @param $data
      * @param $id
@@ -25,7 +15,7 @@ trait CrudTrait
      */
     public function update($data, $id)
     {
-        return $this->model->find($id)->store($data);
+        return $this->model->find($id)->update($data);
     }
 
 

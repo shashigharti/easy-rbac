@@ -11,13 +11,16 @@ use Illuminate\Http\Request;
 trait CrudTrait
 {
 
-
     /**
      * @param Request $request
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index(Request $request)
     {
-        $query = $this->model->all();
+        $records = $this->model->all();
+        return view("easy-rbac::{$this->type}.index", [
+            'records' => $records
+        ]);
     }
 
 
@@ -41,7 +44,8 @@ trait CrudTrait
     {
         $model = $this->model->find($id);
         return view("easy-rbac::{$this->type}.create", [
-            'model' => $model
+            'model' => $model,
+            'type' => $this->type
         ]);
     }
 
