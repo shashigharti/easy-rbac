@@ -1,0 +1,13 @@
+{
+  "name": "robustit/laravel-rbac",
+  "description": "Role Based Access Control",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Shashi Gharti",
+      "email": "shashi.gharti@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
+}
