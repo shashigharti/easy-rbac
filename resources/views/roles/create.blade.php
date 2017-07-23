@@ -38,11 +38,10 @@
                                     <td>{{$group}}</td>
                                     <td>
                                         @if(is_array($permissions))
-                                            @foreach($permissions as  $name => $permissions)
-                                                <input type="checkbox" name="permission[]" value="">
 
-                                                {{-- {{Form::checkbox('permission[]', $name, $permission_helper->hasPermission($model, $name),['class' => 'each_permission permissions '.$group.'','data-parent' => $group])}} {{$permissions}}
-                                --}}             @endforeach
+                                            @foreach($permissions as  $permission)
+                                                <input type="checkbox" name="permission[]" value="{{$permission['name']}}"> {{$permission['display_name']}}
+                                            @endforeach
                                         @endif
                                     </td>
                                 </tr>

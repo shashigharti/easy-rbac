@@ -28,9 +28,10 @@ class PermissionHelper
         $all_permissions = $this->model->all();
         $permissions = [];
         foreach ($all_permissions as $permission) {
-            $permissions[$permission->group_name] = [
+            $permissions[$permission->group_name][] = [
                 'id' => $permission->id,
-                'name' => $permission->name
+                'name' => $permission->name,
+                'display_name' => $permission->display_name
             ];
         }
         return $permissions;
